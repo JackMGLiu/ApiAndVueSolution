@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiApplication</name>
+    </assembly>
+    <members>
+        <member name="T:ApiApplication.Aop.AopDemo">
+            <summary>
+            拦截器 继承IInterceptor接口
+            </summary>
+        </member>
+        <member name="M:ApiApplication.Aop.AopDemo.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            实例化IInterceptor唯一方法 
+            </summary>
+            <param name="invocation">包含被拦截方法的信息</param>
+        </member>
+        <member name="M:ApiApplication.Aop.CacheAopDemo.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            Attribute版本
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="M:ApiApplication.Aop.CacheAopDemo.CustomCacheKey(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            自定义缓存键
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Aop.CacheAopDemo.GetArgumentValue(System.Object)">
+            <summary>
+            object 转 string
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.MyMemoryCache.Exists(System.String)">
+            <summary>
+            验证缓存项是否存在
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.MyMemoryCache.Get(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.MyMemoryCache.AddMemoryCache(System.String,System.Object,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="expiresSliding">滑动过期时长（如果在过期时间内有操作，则以当前时间点延长过期时间）</param>
+            <param name="expiressAbsoulte">绝对过期时长</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.MyToken.IssueJWT(ApiApplication.AuthHelper.TokenModel,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            获取JWT字符串并存入缓存
+            </summary>
+            <param name="tm"></param>
+            <param name="expireSliding"></param>
+            <param name="expireAbsoulte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.OverWrite.JwtHelper.IssueJWT(ApiApplication.AuthHelper.OverWrite.TokenModelJWT)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.OverWrite.JwtHelper.SerializeJWT(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ApiApplication.AuthHelper.OverWrite.JwtTokenAuth._next">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.OverWrite.JwtTokenAuth.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.OverWrite.JwtTokenAuth.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.OverWrite.TokenModelJWT.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.OverWrite.TokenModelJWT.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.OverWrite.TokenModelJWT.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="F:ApiApplication.AuthHelper.TokenAuth._next">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.TokenAuth.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:ApiApplication.AuthHelper.TokenAuth.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.Uid">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.Uname">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.Icon">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.UNickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ApiApplication.AuthHelper.TokenModel.Sub">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="M:ApiApplication.Controllers.LoginController.GetJWTStr2(System.Int64,System.String)">
+            <summary>
+            获取JWT的重写方法，推荐这种，注意在文件夹OverWrite下
+            </summary>
+            <param name="id">id</param>
+            <param name="sub">角色</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Controllers.ValuesController.Get">
+            <summary>
+            获取数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ApiApplication.Startup">
+            <summary>
+            DotnetCore配置类
+            </summary>
+        </member>
+        <member name="M:ApiApplication.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:ApiApplication.Startup.Configuration">
+            <summary>
+            配置类属性
+            </summary>
+        </member>
+    </members>
+</doc>

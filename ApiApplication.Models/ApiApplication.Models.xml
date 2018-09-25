@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiApplication.Models</name>
+    </assembly>
+    <members>
+        <member name="T:ApiApplication.Models.MessageModel`1">
+            <summary>
+            通用返回信息类
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.MessageModel`1.Success">
+            <summary>
+            操作是否成功
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.MessageModel`1.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.MessageModel`1.Data">
+            <summary>
+            返回数据集合
+            </summary>
+        </member>
+        <member name="T:ApiApplication.Models.Models.Advertisement">
+            <summary>
+            广告实体类
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.Id">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.Createdate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.ImgUrl">
+            <summary>
+            广告图片
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.Title">
+            <summary>
+            广告标题
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.Url">
+            <summary>
+            广告链接
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.Models.Advertisement.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:ApiApplication.Models.TableModel`1">
+            <summary>
+            表格数据，支持分页
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.TableModel`1.Code">
+            <summary>
+            返回编码
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.TableModel`1.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.TableModel`1.Count">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="P:ApiApplication.Models.TableModel`1.Data">
+            <summary>
+            返回数据集
+            </summary>
+        </member>
+        <member name="T:ApiApplication.Models.UtilConvert">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToInt(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToInt(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToMoney(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToMoney(System.Object,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToString(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToString(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToDecimal(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToDecimal(System.Object,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToDate(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToDate(System.Object,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiApplication.Models.UtilConvert.ObjToBool(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
